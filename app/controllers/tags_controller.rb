@@ -1,4 +1,5 @@
 class TagsController < ApplicationController
+  before_filter :require_login, only: [:destroy, :edit]
 
   include TagsHelper
   def show
